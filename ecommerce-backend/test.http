@@ -1,0 +1,122 @@
+PUT http://localhost:5000/api/products/6a95752385b2b89f8686cb03
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTUwNTg4ZDE4MDQ0OTE3MWMyZjY2ZiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4ODM0NTY4OSwiZXhwIjoxNzg4MzQ5Mjg5fQ.y9DFKp1dtwkLVIImebO18opHk3WZ4KattvvjskMZT1w
+Content-Type: application/json
+
+{
+  "price": 45000,
+  "stock": 20
+}
+
+
+###
+DELETE http://localhost:5000/api/products/6a95752385b2b89f8686cb03
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTUwNTg4ZDE4MDQ0OTE3MWMyZjY2ZiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4ODM0NTY4OSwiZXhwIjoxNzg4MzQ5Mjg5fQ.y9DFKp1dtwkLVIImebO18opHk3WZ4KattvvjskMZT1w
+
+###
+POST http://localhost:5000/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTUwNTg4ZDE4MDQ0OTE3MWMyZjY2ZiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4ODM0NTY4OSwiZXhwIjoxNzg4MzQ5Mjg5fQ.y9DFKp1dtwkLVIImebO18opHk3WZ4KattvvjskMZT1w
+Content-Type: application/json
+
+{
+  "products": [
+    {
+      "product": "PRODUCT_ID",
+      "quantity": 2
+    }
+  ],
+  "totalAmount": 90000
+}
+
+###
+GET http://localhost:5000/api/products
+
+###
+
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTUwNTg4ZDE4MDQ0OTE3MWMyZjY2ZiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4ODM0NTY4OSwiZXhwIjoxNzg4MzQ5Mjg5fQ.y9DFKp1dtwkLVIImebO18opHk3WZ4KattvvjskMZT1w
+Content-Type: application/json
+
+{
+  "name": "Mobile",
+  "category": "Electronics",
+  "price": 30000,
+  "description": "Test mobile",
+  "stock": 10
+}
+###
+POST http://localhost:5000/api/products
+Content-Type: application/json
+{
+  "name": "Laptop",
+  "category": "Electronics",
+  "price": 49999,
+  "description": "Powerful laptop for everyday use",
+  "stock": 10
+}
+###
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTUwNTg4ZDE4MDQ0OTE3MWMyZjY2ZiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4ODM0NTY4OSwiZXhwIjoxNzg4MzQ5Mjg5fQ.y9DFKp1dtwkLVIImebO18opHk3WZ4KattvvjskMZT1w
+Content-Type: application/json
+{
+  "name": "Headphones",
+  "category": "Electronics",
+  "price": 19999,
+  "description": "High-quality headphones for immersive sound experience",
+  "stock": 15
+}
+###
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTUwNTg4ZDE4MDQ0OTE3MWMyZjY2ZiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4ODM0NTY4OSwiZXhwIjoxNzg4MzQ5Mjg5fQ.y9DFKp1dtwkLVIImebO18opHk3WZ4KattvvjskMZT1w
+Content-Type: application/json
+{
+  "name": "Smartwatch",
+  "category": "Electronics",
+  "price": 14999,
+  "description": "Stylish smartwatch with fitness tracking features",
+  "stock": 20
+}
+
+
+###
+
+POST http://localhost:5000/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTUwNTg4ZDE4MDQ0OTE3MWMyZjY2ZiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4ODM0NTY4OSwiZXhwIjoxNzg4MzQ5Mjg5fQ.y9DFKp1dtwkLVIImebO18opHk3WZ4KattvvjskMZT1w
+Content-Type: application/json
+
+{
+  "products": [
+    {
+      "product": "6a98039907b42861ad937216",
+      "quantity": 2
+    }
+  ],
+  "totalAmount": 60000
+}
+
+###
+
+GET http://localhost:5000/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTUwNTg4ZDE4MDQ0OTE3MWMyZjY2ZiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4ODM0NTY4OSwiZXhwIjoxNzg4MzQ5Mjg5fQ.y9DFKp1dtwkLVIImebO18opHk3WZ4KattvvjskMZT1w
+
+
+###
+PUT http://localhost:5000/api/orders/6a98039907b42861ad937216
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTUwNTg4ZDE4MDQ0OTE3MWMyZjY2ZiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4ODM0OTg1OSwiZXhwIjoxNzg4MzUzNDU5fQ.uXPunIB3f2eTeWnF2YGw21Vgd4PvMOx6ThAEmoZxbDI
+Content-Type: application/json
+
+{
+  "status": "confirmed"
+}
+
+###
+GET http://localhost:5000/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTUwNTg4ZDE4MDQ0OTE3MWMyZjY2ZiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4ODM0NTY4OSwiZXhwIjoxNzg4MzQ5Mjg5fQ.y9DFKp1dtwkLVIImebO18opHk3WZ4KattvvjskMZT1w
+
+###
+PUT http://localhost:5000/api/orders/6a98053307b42861ab937217
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOTUwNTg4ZDE4MDQ0OTE3MWMyZjY2ZiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4ODM0OTg1OSwiZXhwIjoxNzg4MzUzNDU5fQ.uXPunIB3f2eTeWnF2YGw21Vgd4PvMOx6ThAEmoZxbDI
+Content-Type: application/json
+
+{
+  "status": "confirmed"
+}
