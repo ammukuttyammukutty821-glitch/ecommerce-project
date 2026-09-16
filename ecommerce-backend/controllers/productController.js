@@ -69,7 +69,6 @@ const getProducts = async (req, res, next) => {
     const products = await query;
 
     res.json({
-      count: products.length,
       products
     });
   } catch (error) {
