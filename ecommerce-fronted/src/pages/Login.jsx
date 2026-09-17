@@ -10,7 +10,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axiosInstance.post("/auth/login", {
+      const response = await axiosInstance.post("/users/login", {
         email,
         password,
       });
