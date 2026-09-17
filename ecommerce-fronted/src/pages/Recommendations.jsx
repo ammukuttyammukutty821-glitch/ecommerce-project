@@ -4,7 +4,7 @@ import axiosInstance from "../api/axiosInstance";
 function Recommendations() {
   const [recommendations, setRecommendations] = useState([]);
   const [message, setMessage] = useState("");
-
+const [loading, setLoading] = useState(true);//
   useEffect(() => {
     const fetchRecommendations = async () => {
       try {
@@ -25,32 +25,32 @@ function Recommendations() {
           error.response?.data?.message ||
             "Unable to load recommendations"
         );
+      } finally {
+      setLoading(false); 
       }
     };
 
     fetchRecommendations();
   }, []);
 
-  return (
+  
+
+return (
     <div className="recommendations-page">
       <h1>AI Recommendations</h1>
 
       {message && <p>{message}</p>}
 
-      {recommendations.length === 0 && !message ? (
+      {loading ? (
         <p>Loading recommendations...</p>
+      ) : recommendations.length === 0 ? (
+        <p>No recommendations found.</p>
       ) : (
         recommendations.map((item, index) => (
           <div className="recommendation-card" key={item._id || index}>
             <h2>{item.name || item.product || "Recommended Product"}</h2>
-
-            {item.category && (
-              <p>Category: {item.category}</p>
-            )}
-
-            {item.price && (
-              <p>Price: ₹{item.price}</p>
-            )}
+            {item.category && <p>Category: {item.category}</p>}
+            {item.price && <p>Price: ${item.price}</p>}
           </div>
         ))
       )}
