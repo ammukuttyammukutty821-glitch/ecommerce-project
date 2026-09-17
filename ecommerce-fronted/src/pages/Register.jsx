@@ -24,7 +24,7 @@ function Register() {
 
     try {
       const response = await axiosInstance.post(
-        "/auth/register",
+        "/users/register",
         formData
       );
 
