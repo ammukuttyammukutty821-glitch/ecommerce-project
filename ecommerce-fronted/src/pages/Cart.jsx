@@ -47,11 +47,16 @@ function Cart() {
       setCartProduct(null);
     } catch (error) {
       console.error("Order Error:", error);
-
+      if (error.response && error.response.status === 401) {
+        alert("Session expired. Please log in again.");
+        window.location.href = "/login";
+      } else {
+      
       setMessage(
-        error.response?.data?.message ||
-          "Failed to create order"
+        error.response?.data?.message || "Failed to create order"
+        
       );
+    }
     }
   };
 
